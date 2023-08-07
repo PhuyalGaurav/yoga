@@ -52,8 +52,8 @@ section {
 
 
 #hero .logo img {
-    width: 100px;
-    height: 100px;
+    width: 300px;
+    height: 300px;
 }
 
 #hero h1 {
@@ -104,8 +104,8 @@ header .tri-down {
     }
 
     #hero .logo img {
-        width: 60px;
-        height: 60px;
+        width: 190px;
+        height: 190px;
     }
 
     #hero h1 {
