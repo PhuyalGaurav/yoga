@@ -5,10 +5,16 @@ body {
     background-color: #fff;
     scroll-behavior: smooth;
 }
-
+i {
+    width: 500px;
+    height: 250px;
+    margin: 50px;
+}
 p {
     padding: 0;
     margin: 0 0 30px 0;
+    text-align: center;
+    padding-top: 4px;
 }
 
 h1,
@@ -68,7 +74,7 @@ section {
     justify-content: center;
     align-items: center;
     color: rgba(255, 255, 255, 0.747);
-    padding-bottom: 40px;
+    padding-bottom: 3%;
 }
 
 #hero .navigation {
@@ -264,14 +270,15 @@ footer svg.svg-inline--fa {
     transition: all .2s ease-in-out;
 }
  footer .service-icon {
-     float: left;
-     padding:0;
-     line-height: 45px;
+     /* float: ; */
+     /* padding:0; */
+     /* line-height: 45px; */
      height: 45px;
      width: 45px;
      border-radius: 50%;
      background: #fff;
      margin-right: 5px;
+     margin-left: 45%;
      text-align: center;
      display: flex;
      justify-content: center;
