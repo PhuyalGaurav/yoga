@@ -25,12 +25,13 @@ h5,
 h5 {
     font-family: 'Raleway',
         sans-serif;
-    color: #000;
+    color: #353535;
     font-weight: 500;
     margin: 0 0 30px 0;
     padding: 0;
     text-align: center;
-    text-shadow: #000;
+
+
 }
 
 section {
@@ -65,7 +66,7 @@ section {
 #hero h1 {
     display: flex;
     justify-content: center;
-    color: #fff;
+    color: #f1f508;
     padding-bottom: 15px;
 }
 
@@ -73,7 +74,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgba(255, 255, 255, 0.747);
+    color: rgb(255, 255, 255);
     padding-bottom: 3%;
 }
 
