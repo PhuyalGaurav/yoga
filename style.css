@@ -51,7 +51,7 @@ section {
 }
 
 #hero .logo {
-    display: flex;
+    display: flex;  
     justify-content: center;
     padding-top: 30vh;
     padding-bottom: 15vh;
