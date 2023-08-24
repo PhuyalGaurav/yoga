@@ -64,8 +64,9 @@ section {
 
 #hero h1 {
     display: flex;
+    size: 50px;
     justify-content: center;
-    color: #8f8f8f;
+    color: #000000;
     padding-bottom: 15px;
 }
 
