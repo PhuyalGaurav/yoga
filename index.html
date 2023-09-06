@@ -166,7 +166,184 @@
         </div>
       </div>
     </section>
+    <h1 style="text-align: center;">ग्यालेरी : </h1>
+    <hr>
+    <section id = "new-img-slider">
+         <!-- #region Jssor Slider Begin -->
+    <!-- Generator: Jssor Slider Composer -->
+    <!-- Source: https://www.jssor.com/gauravphuyal/untitled.slider/=edit -->
+    <script src="js/jssor.slider-28.1.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.jssor_1_slider_init = function() {
 
+            var jssor_1_options = {
+              $AutoPlay: 1,
+              $FillMode: 5,
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$,
+                $SpacingX: 16,
+                $SpacingY: 16
+              }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            //make sure to clear margin of the slider container element
+            jssor_1_slider.$Elmt.style.margin = "";
+
+            /*#region responsive code begin*/
+
+            /*
+                parameters to scale jssor slider to fill parent container
+
+                MAX_WIDTH
+                    prevent slider from scaling too wide
+                MAX_HEIGHT
+                    prevent slider from scaling too high, default value is original height
+                MAX_BLEEDING
+                    prevent slider from bleeding outside too much, default value is 1
+                    0: contain mode, allow up to 0% to bleed outside, the slider will be all inside parent container
+                    1: cover mode, allow up to 100% to bleed outside, the slider will cover full area of parent container
+                    0.1: flex mode, allow up to 10% to bleed outside, this is better way to make full window slider, especially for mobile devices
+            */
+
+            var MAX_WIDTH = 6000;
+            var MAX_HEIGHT = 2000;
+            var MAX_BLEEDING = 0.128;
+
+            function ScaleSlider() {
+                var containerElement = jssor_1_slider.$Elmt.parentNode;
+                var containerWidth = containerElement.clientWidth;
+
+                if (containerWidth) {
+                    var originalWidth = jssor_1_slider.$OriginalWidth();
+                    var originalHeight = jssor_1_slider.$OriginalHeight();
+
+                    var containerHeight = containerElement.clientHeight || originalHeight;
+
+                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+                    var expectedHeight = Math.min(MAX_HEIGHT || containerHeight, containerHeight);
+
+                    //constrain bullets, arrows inside slider area, it's optional, remove it if not necessary
+                    if (MAX_BLEEDING >= 0 && MAX_BLEEDING < 1) {
+                        var widthRatio = expectedWidth / originalWidth;
+                        var heightRatio = expectedHeight / originalHeight;
+                        var maxScaleRatio = Math.max(widthRatio, heightRatio);
+                        var minScaleRatio = Math.min(widthRatio, heightRatio);
+
+                        maxScaleRatio = Math.min(maxScaleRatio / minScaleRatio, 1 / (1 - MAX_BLEEDING)) * minScaleRatio;
+                        expectedWidth = Math.min(expectedWidth, originalWidth * maxScaleRatio);
+                        expectedHeight = Math.min(expectedHeight, originalHeight * maxScaleRatio);
+                    }
+
+                    //scale the slider to expected size
+                    jssor_1_slider.$ScaleSize(expectedWidth, expectedHeight, MAX_BLEEDING);
+
+                    //position slider at center in vertical orientation
+                    jssor_1_slider.$Elmt.style.top = ((containerHeight - expectedHeight) / 2) + "px";
+
+                    //position slider at center in horizontal orientation
+                    jssor_1_slider.$Elmt.style.left = ((containerWidth - expectedWidth) / 2) + "px";
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+
+            ScaleSlider();
+
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            /*#endregion responsive code end*/
+        };
+    </script>
+    <style>
+        /*jssor slider bullet skin 102 css*/
+        .jssorb102 .i {position:absolute;cursor:pointer;}
+        .jssorb102 .i .ci {fill:#fff;}
+        .jssorb102 .i .co {fill:#000;opacity:.2;}
+        .jssorb102 .i:hover .co {fill:#ff9933;opacity: 1;}
+        .jssorb101 .i:hover .ci {fill:#000;}
+        .jssorb102 .iav .ci {fill:#000;stroke-width:0;}
+        .jssorb102 .iav .co {fill:#ffba04;opacity: 1;}
+        .jssorb102 .i.idn {opacity:.3;}
+
+        /*jssor slider arrow skin 074 css*/
+        .jssora074 {display:block;position:absolute;cursor:pointer;}
+        .jssora074 .a {fill:#333;fill-opacity:.7;stroke:#fff;stroke-width:160;stroke-miterlimit:10;stroke-opacity:.7;}
+        .jssora074:hover {opacity:.8;}
+        .jssora074.jssora074dn {opacity:.4;}
+        .jssora074.jssora074ds {opacity:.3;pointer-events:none;}
+    </style>
+    <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1000px;height:400px;overflow:hidden;visibility:hidden;">
+        <!-- Loading Screen -->
+        <div data-u="loading" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-position:50% 50%;background-repeat:no-repeat;background-image:url('img/dots-4-x.svg');background-color:rgba(255, 255, 255, 0.7);background-size:60px 60px;"></div>
+        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1000px;height:400px;overflow:hidden;">
+            <div>
+                <img data-u="image" src="img/371291046_326802173028688_3537118636506320758_n.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="img/371487186_684117596917644_8715373333214546484_n.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="img/371505889_976344383596249_6710576914716476481_n.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="img/371547822_1022168135590728_8780854814729017367_n.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="img/371801175_622931743286883_5556246964376547297_n.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="img/371873286_854255619446890_7006313205976387726_n.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="img/371873347_862486925398954_5121063081363047707_n.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="img/371894196_991282538778918_3285870386503067679_n.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="img/371954957_834409651388126_8907049153045852728_n.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="img/372072553_679946000832764_8757540933151571193_n.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="img/373058876_779363357333701_8601197160234131999_n.jpg" />
+            </div>
+        </div><a data-scale="0" href="https://www.jssor.com" style="display:none;position:absolute;">slider html</a>
+        <!-- Bullet Navigator -->
+        <div data-u="navigator" class="jssorb102" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+            <div data-u="prototype" class="i" style="width:16px;height:16px;">
+                <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                    <circle class="co" cx="8000" cy="8000" r="5000"></circle>
+                    <circle class="ci" cx="8000" cy="8000" r="3000"></circle>
+                </svg>
+            </div>
+        </div>
+        <!-- Arrow Navigator -->
+        <div data-u="arrowleft" class="jssora074" style="width:50px;height:50px;top:0px;left:25px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <path class="a" d="M4037.7,8357.3l5891.8,5891.8c100.6,100.6,219.7,150.9,357.3,150.9s256.7-50.3,357.3-150.9 l1318.1-1318.1c100.6-100.6,150.9-219.7,150.9-357.3c0-137.6-50.3-256.7-150.9-357.3L7745.9,8000l4216.4-4216.4 c100.6-100.6,150.9-219.7,150.9-357.3c0-137.6-50.3-256.7-150.9-357.3l-1318.1-1318.1c-100.6-100.6-219.7-150.9-357.3-150.9 s-256.7,50.3-357.3,150.9L4037.7,7642.7c-100.6,100.6-150.9,219.7-150.9,357.3C3886.8,8137.6,3937.1,8256.7,4037.7,8357.3 L4037.7,8357.3z"></path>
+            </svg>
+        </div>
+        <div data-u="arrowright" class="jssora074" style="width:50px;height:50px;top:0px;right:25px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <path class="a" d="M11962.3,8357.3l-5891.8,5891.8c-100.6,100.6-219.7,150.9-357.3,150.9s-256.7-50.3-357.3-150.9 L4037.7,12931c-100.6-100.6-150.9-219.7-150.9-357.3c0-137.6,50.3-256.7,150.9-357.3L8254.1,8000L4037.7,3783.6 c-100.6-100.6-150.9-219.7-150.9-357.3c0-137.6,50.3-256.7,150.9-357.3l1318.1-1318.1c100.6-100.6,219.7-150.9,357.3-150.9 s256.7,50.3,357.3,150.9l5891.8,5891.8c100.6,100.6,150.9,219.7,150.9,357.3C12113.2,8137.6,12062.9,8256.7,11962.3,8357.3 L11962.3,8357.3z"></path>
+            </svg>
+        </div>
+    </div>
+    <script type="text/javascript">jssor_1_slider_init();
+    </script>
+    <!-- #endregion Jssor Slider End -->
+
+    </section>
+    <hr>
     <section id="programs">
 
       <div class="container programs">
