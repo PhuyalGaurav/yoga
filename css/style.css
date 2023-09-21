@@ -329,7 +329,7 @@ footer .footer-container {
   --dark-color: hsl(212, 40%, 12%);
   --white-color: hsl(212, 4%, 95%);
   --body-color: hsl(212, 12%, 44%);
-  --container-color: hsl(189, 38%, 59%);
+  --container-color: hsl(0, 0%, 24%);
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -377,6 +377,7 @@ a {
   text-align: center;
   position: relative;
   z-index: 10;
+  height: 250px;
 }
 
 .card__img {
@@ -402,12 +403,12 @@ a {
 .card__name {
   font-size: var(--h2-font-size);
   color: var(--second-color);
-  margin-bottom: .75rem;
+  margin-bottom: .15rem;
 }
 
 .card__description {
+    color: #fff;
   font-weight: 500;
-  margin-bottom: 1.75rem;
 }
 
 /* Swiper class */
